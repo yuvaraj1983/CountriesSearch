@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
+import   "./CountriesSearch.css";
+
 const CountriesSaerch = () => {
     const [countries, setCountries] = useState([]);
     const [search, setSearch] = useState('');
@@ -29,7 +31,7 @@ const CountriesSaerch = () => {
     
 
       
-        <div style={{ display: 'flex', justifyContent:'center', alignItems:'center',height:"100vh",flexWrap:'wrap'}}>
+        <div className='countryCard'>
             {
         countries.map((country) => (
             <div key={country.name.common} style={{ border:'1px solid grey', margin:'5px',borderRadius:'5px', width:'200px', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center'}}>
