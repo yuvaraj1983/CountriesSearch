@@ -5,6 +5,7 @@ const CountriesSaerch = () => {
     const [countries, setCountries] = useState([]);
     const [search, setSearch] = useState('');
     const url = 'https://restcountries.com/v3.1/all';
+    
 
     useEffect(() => {
         if(!search){
