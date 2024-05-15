@@ -18,7 +18,10 @@ const CountriesSaerch = () => {
         })
         .catch((err) => console.log(err))
         } else {
-            const filteredData = countries.filter((country) => country.name.common.match(search))
+            // const filteredData = countries.filter((country) => country.name.common.match(search))
+            const filteredData = countries.filter((country) => 
+                country.name.common.toLowerCase().includes(search.toLowerCase())
+            );
             setCountries(filteredData);
         }
         
