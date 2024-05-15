@@ -5,7 +5,7 @@ const CountriesSaerch = () => {
     const [countries, setCountries] = useState([]);
     const [search, setSearch] = useState('');
     const url = 'https://restcountries.com/v3.1/all';
-    
+
 
     useEffect(() => {
         if(!search){
@@ -35,7 +35,7 @@ const CountriesSaerch = () => {
             <div key={country.name.common} style={{ border:'1px solid grey', margin:'5px',borderRadius:'5px', width:'200px', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center'}}>
                
                     <img style={{margin:'10px',width:'100px', height:'100px'}} src={country.flags.png} alt={country.flags.alt} />
-                    <h5>{country.name.common}</h5>
+                    <p>{country.name.common}</p>
             </div>
         ))
     }
