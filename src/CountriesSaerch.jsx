@@ -33,11 +33,11 @@ const CountriesSaerch = () => {
     </div>
     
 { Boolean(countries.length)  && 
- <div className='countryCard'>
+ <div className='countryCardHdr'>
  {
 
 countries.map((country) => (
- <div key={country.name.common} style={{ border:'1px solid grey', margin:'5px',borderRadius:'5px', width:'200px', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center'}}>
+ <div key={country.name.common} className='countryCard'>
     
          <img style={{margin:'10px',width:'100px', height:'100px'}} src={country.flags.png} alt={country.flags.alt} />
          <p>{country.name.common}</p>

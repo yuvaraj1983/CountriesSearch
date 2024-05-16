@@ -1,4 +1,4 @@
-.countryCard {
+.countryCardHdr {
     display: flex; 
     flex-direction: row;
     justify-content:center;
@@ -6,4 +6,15 @@
     height:100vh;
     flex-wrap:wrap;
   
+}
+
+.countryCard {
+    border:1px solid grey;
+     margin:5px;
+     border-radius:5px; 
+     width:200px;
+      display:flex;
+      flex-direction: column;
+       justify-content:center;
+        align-items:center;
 }
