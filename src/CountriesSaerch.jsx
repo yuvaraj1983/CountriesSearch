@@ -32,7 +32,7 @@ const CountriesSaerch = () => {
             <input style={{width:'500px'}} type='text' onChange={(e) => setSearch(e.target.value) } />
     </div>
     
-{ countries.length && 
+{ Boolean(countries.length)  && 
  <div className='countryCard'>
  {
 
