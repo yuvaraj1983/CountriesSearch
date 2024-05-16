@@ -32,19 +32,23 @@ const CountriesSaerch = () => {
             <input style={{width:'500px'}} type='text' onChange={(e) => setSearch(e.target.value) } />
     </div>
     
+{ countries.length && 
+ <div className='countryCard'>
+ {
 
+countries.map((country) => (
+ <div key={country.name.common} style={{ border:'1px solid grey', margin:'5px',borderRadius:'5px', width:'200px', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center'}}>
+    
+         <img style={{margin:'10px',width:'100px', height:'100px'}} src={country.flags.png} alt={country.flags.alt} />
+         <p>{country.name.common}</p>
+ </div>
+)) 
+
+}
+</div>
+}
       
-        <div className='countryCard'>
-            {
-        countries.map((country) => (
-            <div key={country.name.common} style={{ border:'1px solid grey', margin:'5px',borderRadius:'5px', width:'200px', display: 'flex', flexDirection: 'column', justifyContent:'center', alignItems:'center'}}>
-               
-                    <img style={{margin:'10px',width:'100px', height:'100px'}} src={country.flags.png} alt={country.flags.alt} />
-                    <p>{country.name.common}</p>
-            </div>
-        ))
-    }
-        </div>
+   
     
     </>
   )
